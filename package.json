@@ -1,0 +1,12 @@
+{
+  "name": "mmorpg",
+  "version": "0.1.0",
+  "dependencies": {
+    "koa": "~0.5.3",
+    "socket.io": "~1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.6.1",
+    "gulp-less": "~1.2.3"
+  }
+}
