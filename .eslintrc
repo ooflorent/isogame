@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "brace-style": [2, "1tbs"],
+    "no-path-concat": 0,
+    "quotes": [1, "single", "avoid-escape"],
+    "strict": 0
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

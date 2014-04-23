@@ -1,0 +1,43 @@
+input,
+button {
+  font: 300 14px @sans-serif;
+  background: rgba(0, 0, 0, .2);
+  border: 1px solid transparent;
+  padding: 16px;
+  margin: 0;
+
+  &:hover {
+    border-color: @navy;
+  }
+
+  &:active,
+  &:focus {
+    outline: 0;
+    border-color: @blue;
+  }
+}
+
+input {
+  display: block;
+  width: 100%;
+  color: @silver;
+
+  &:invalid {
+    border-color: @red;
+    color: @red;
+  }
+}
+
+button {
+  color: @gray;
+
+  &:hover {
+    background: @navy;
+  }
+
+  &:focus,
+  &:active {
+    color: @black;
+    background: @blue;
+  }
+}
