@@ -67,3 +67,8 @@ module.exports = {
     authenticate(login, done);
   }
 };
+
+users['florent'] = {
+  username: 'Florent',
+  password: 'florent'
+};

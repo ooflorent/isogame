@@ -1,4 +1,4 @@
-function http(url, data, done) {
+module.exports = function(url, data, done) {
   var xhr = new XMLHttpRequest();
   if (done) {
     xhr.open('POST', url, true);
@@ -23,4 +23,4 @@ function http(url, data, done) {
   };
 
   xhr.send(data);
-}
+};

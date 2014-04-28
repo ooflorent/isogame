@@ -15,21 +15,15 @@
     </form>
     <form id="signup">
       <input class="username" placeholder="Username" maxlength="20" required/>
-      <input class="password1" type="password" placeholder="Password" required/>
-      <input class="password2" type="password" placeholder="Confirmation" required/>
+      <input class="password" type="password" placeholder="Password" required/>
+      <input class="confirm" type="password" placeholder="Confirmation" required/>
       <div>
         <a>Connect an existing account</a>
         <button>Register</button>
       </div>
     </form>
-    <ul id="heroes">
-      <li v-repeat="heroes">
-        <span v-text="name"></span>
-        <span v-text="type"></span>
-        <span v-text="level"></span>
-      </li>
-    </ul>
     <div id="game">
+      <canvas class="iso"></canvas>
       <div class="party">
         <div class="player">
           <div class="info">
@@ -80,6 +74,15 @@
         <div class="spell">
           <div class="icon"></div>
           <div class="key">R</div>
+        </div>
+      </div>
+    </div>
+    <div id="error">
+      <div class="box">
+        <div class="title">ERROR</div>
+        <div class="msg"></div>
+        <div class="btn">
+          <button>OK</button>
         </div>
       </div>
     </div>

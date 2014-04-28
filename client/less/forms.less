@@ -1,14 +1,12 @@
 input,
 button {
   font: 300 14px @sans-serif;
-  background: rgba(0, 0, 0, .2);
-  border: 1px solid transparent;
+  background: #12151C;
+  border: 1px solid #343843;
+  border-radius: 2px;
   padding: 16px;
   margin: 0;
-
-  &:hover {
-    border-color: @navy;
-  }
+  color: @silver;
 
   &:active,
   &:focus {
@@ -20,19 +18,21 @@ button {
 input {
   display: block;
   width: 100%;
-  color: @silver;
 
   &:invalid {
     border-color: @red;
     color: @red;
   }
+
+  &:active,
+  &:focus {
+    background: #0E1116;
+  }
 }
 
 button {
-  color: @gray;
-
   &:hover {
-    background: @navy;
+    background: #0E1116;
   }
 
   &:focus,

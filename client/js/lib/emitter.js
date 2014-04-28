@@ -1,4 +1,4 @@
-function emitter(target) {
+module.exports = function(target) {
   var callbacks = {};
   var obj = target || {};
 
@@ -54,4 +54,4 @@ function emitter(target) {
   };
 
   return obj;
-}
+};
