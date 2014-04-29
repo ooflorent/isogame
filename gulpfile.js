@@ -1,16 +1,13 @@
 var gulp = require('gulp');
 
 var clean = require('gulp-clean');
-var concat = require('gulp-concat');
 var eslint = require('gulp-eslint');
 var gulpif = require('gulp-if');
 var htmlmin = require('gulp-htmlmin');
 var less = require('gulp-less');
 var lr = require('gulp-livereload');
-var requirer = require('./lib/gulp-requirer');
-var size = require('gulp-size');
+var requirer = require('gulp-requirer');
 var uglify = require('gulp-uglify');
-var zip = require('gulp-zip');
 
 var minify = false;
 
@@ -29,9 +26,7 @@ gulp.task('scripts', function() {
   return gulp.src('client/js/**/*.js')
     .pipe(eslint())
     .pipe(eslint.format())
-    .pipe(requirer.compile({base: './client/js'}))
-    .pipe(concat('main.js'))
-    .pipe(requirer.boot({module: 'boot'}))
+    .pipe(requirer('main.js', 'boot'))
     .pipe(gulpif(minify, requirer.compress()))
     .pipe(gulpif(minify, uglify()))
     .pipe(gulp.dest('dist/js'));
@@ -65,15 +60,6 @@ gulp.task('watch', ['build', 'server'], function() {
   reload(gulp.watch('client/js/**/*.js', ['scripts']));
   reload(gulp.watch('client/less/**/*.less', ['styles']));
   reload(gulp.watch('server/**/*.js', ['lint']));
-});
-
-gulp.task('package', ['build'], function() {
-  minify = true;
-  return gulp.src('dist/**/*')
-    .pipe(size({title: 'Raw'}))
-    .pipe(zip('client.zip'))
-    .pipe(size({title: 'ZIP'}))
-    .pipe(gulp.dest('build'));
 });
 
 gulp.task('build', ['index', 'scripts', 'styles', 'lint']);
