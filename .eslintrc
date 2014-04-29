@@ -1,7 +1,13 @@
 {
   "rules": {
     "brace-style": [2, "1tbs"],
+    "curly": 0,
+    "dot-notation": 1,
+    "consistent-return": 0,
+    "no-cond-assign": 1,
     "no-path-concat": 0,
+    "no-underscore-dangle": 0,
+    "no-use-before-define": 1,
     "quotes": [1, "single", "avoid-escape"],
     "strict": 0
   },

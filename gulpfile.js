@@ -12,7 +12,7 @@ var size = require('gulp-size');
 var uglify = require('gulp-uglify');
 var zip = require('gulp-zip');
 
-var minify = true;
+var minify = false;
 
 gulp.task('clean', function() {
   return gulp.src(['build', 'dist'], {read: false})
@@ -68,6 +68,7 @@ gulp.task('watch', ['build', 'server'], function() {
 });
 
 gulp.task('package', ['build'], function() {
+  minify = true;
   return gulp.src('dist/**/*')
     .pipe(size({title: 'Raw'}))
     .pipe(zip('client.zip'))
