@@ -1,11 +1,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var auth = require('./auth');
+var config = require('./config');
 
 var app = module.exports = express();
 
 app.use(bodyParser());
-app.use(express.static(__dirname + '/../dist'));
+app.use(express.static(config.paths.client));
 
 app.get('/session/:token', function(req, res) {
   auth.session(req.params.token, function(err, user) {
