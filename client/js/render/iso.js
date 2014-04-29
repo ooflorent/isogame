@@ -1,8 +1,8 @@
-var lighten = require('lib/color').lighten;
+var lighten = require('lib/lighten');
 var vec3 = require('lib/vec3');
 var Canvas = require('render/canvas');
 
-function IsoEngine(el) {
+function Isogon(el) {
   this.canvas = new Canvas(el);
   this.angle = Math.PI / 6;
   this.scale = 35;
@@ -11,7 +11,7 @@ function IsoEngine(el) {
   this.pov([2, -1, 3]);
 }
 
-IsoEngine.prototype = {
+Isogon.prototype = {
   add: function(paths, color) {
     for (var i = 0; i < paths.length; i++) {
       this.path(paths[i], color);
@@ -45,4 +45,4 @@ IsoEngine.prototype = {
   }
 };
 
-module.exports = IsoEngine;
+module.exports = Isogon;

@@ -8,7 +8,7 @@ var canvas = el.find('.iso');
 canvas.width = document.body.clientWidth;
 canvas.height = document.body.clientHeight;
 
-var iso = new IsoEngine(canvas);
+var iso = new Isogon(canvas);
 
 iso.add(cube([0, 0, 0], 2, 2, 2), '#666666');
 
