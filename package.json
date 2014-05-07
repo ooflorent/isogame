@@ -1,11 +1,11 @@
 {
-  "name": "mmorpg",
+  "name": "isogame",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "builder-html-minifier": "^1.0.0",
+    "builder-less": "^1.0.0",
     "gulp": "^3.6.2",
-    "gulp-component-builder": "~0.1.2",
-    "gulp-uglify": "~0.2.1",
-    "builder-html-minifier": "^1.0.0"
+    "gulp-component-builder": "~0.1.2"
   }
 }

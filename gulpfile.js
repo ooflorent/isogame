@@ -1,34 +1,33 @@
 var gulp = require('gulp');
 var component = require('gulp-component-builder');
-var uglify = require('gulp-uglify');
 
 gulp.task('scripts', function() {
   return gulp.src('component.json')
     .pipe(component.scripts(scriptsPlugins))
-    // .pipe(uglify())
     .pipe(gulp.dest('build'));
 });
 
 gulp.task('styles', function() {
   return gulp.src('component.json')
-    .pipe(component.styles())
+    .pipe(component.styles(stylesPlugins))
     .pipe(gulp.dest('build'));
 });
 
 gulp.task('watch', ['build'], function() {
   gulp.watch(['component.json', 'lib/**/*.js', 'src/**/*.js'], ['scripts']);
-  gulp.watch(['component.json', 'lib/**/*.css', 'src/**/*.css'], ['styles']);
+  gulp.watch(['component.json', 'lib/**/*.less', 'src/**/*.less'], ['styles']);
 });
 
 gulp.task('build', ['scripts', 'styles']);
 gulp.task('default', ['build']);
 
+var less = require('builder-less');
 var minifier = require('builder-html-minifier');
 
 function scriptsPlugins(builder, options) {
   builder
-    .use('scripts', component.plugins.js(opts))
-    .use('json', component.plugins.json(opts));
+    .use('scripts', component.plugins.js())
+    .use('json', component.plugins.json());
 
   builder.use('templates', minifier({
     collapseWhitespace: true,
@@ -38,4 +37,8 @@ function scriptsPlugins(builder, options) {
     removeEmptyAttributes: true,
     removeOptionalTags: true
   }));
+}
+
+function stylesPlugins(builder, options) {
+  builder.use('styles', less());
 }
