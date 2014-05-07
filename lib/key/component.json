@@ -1,0 +1,10 @@
+{
+  "name": "key",
+  "scripts": [
+    "index.js"
+  ],
+  "dependencies": {
+    "component/emitter": "^1.1.2",
+    "component/event": "0.1.3"
+  }
+}

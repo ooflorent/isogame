@@ -1,0 +1,13 @@
+{
+  "name": "error",
+  "scripts": [
+    "index.js"
+  ],
+  "templates": [
+    "index.html"
+  ],
+  "locals": [
+    "key",
+    "vue"
+  ]
+}

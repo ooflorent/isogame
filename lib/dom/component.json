@@ -1,0 +1,9 @@
+{
+  "name": "dom",
+  "scripts": [
+    "index.js"
+  ],
+  "dependencies": {
+    "component/event": "0.1.3"
+  }
+}

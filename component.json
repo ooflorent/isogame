@@ -1,0 +1,11 @@
+{
+  "name": "isogame",
+  "private": true,
+  "paths": [
+    "lib",
+    "src"
+  ],
+  "locals": [
+    "boot"
+  ]
+}

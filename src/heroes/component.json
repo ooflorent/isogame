@@ -1,0 +1,12 @@
+{
+  "name": "heroes",
+  "scripts": [
+    "index.js"
+  ],
+  "templates": [
+    "index.html"
+  ],
+  "locals": [
+    "vue"
+  ]
+}

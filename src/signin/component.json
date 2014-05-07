@@ -1,0 +1,12 @@
+{
+  "name": "signin",
+  "scripts": [
+    "index.js"
+  ],
+  "templates": [
+    "index.html"
+  ],
+  "locals": [
+    "vue"
+  ]
+}

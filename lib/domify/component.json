@@ -1,0 +1,9 @@
+{
+  "name": "domify",
+  "scripts": [
+    "index.js"
+  ],
+  "locals": [
+    "dom"
+  ]
+}
