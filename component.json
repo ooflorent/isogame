@@ -1,6 +1,9 @@
 {
   "name": "isogame",
   "private": true,
+  "scripts": [
+    "index.js"
+  ],
   "paths": [
     "lib",
     "src"

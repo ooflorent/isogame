@@ -6,6 +6,7 @@
     "builder-html-minifier": "^1.0.0",
     "builder-less": "^1.0.0",
     "gulp": "^3.6.2",
-    "gulp-component-builder": "~0.1.2"
+    "gulp-component-builder": "~0.1.2",
+    "gulp-htmlmin": "~0.1.2"
   }
 }
