@@ -1,0 +1,65 @@
+@import "../theme/variables";
+
+#game {
+  .party {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 15%;
+    max-width: 250px;
+  }
+
+  .player {
+    .track {
+      background: rgba(0, 0, 0, .3);
+      height: 8px;
+      margin: 3px 0;
+      padding: 1px;
+    }
+
+    .gauge {
+      height: 100%;
+    }
+
+    .level {
+      color: @yellow;
+      font-size: 80%;
+    }
+
+    .hp .gauge { background: @red; }
+    .mp .gauge { background: @blue; }
+    .xp .gauge { background: @maroon; }
+
+    &.other {
+      max-width: 70%;
+    }
+
+    & + .player {
+      margin: 20px 0 0;
+    }
+  }
+
+  .spells {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    margin-left: -37px * 6 / 2;
+
+    .spell {
+      display: inline-block;
+      margin-left: 1px;
+      width: 36px;
+
+      .icon {
+        height: 36px;
+        background: rgba(0, 0, 0, .3);
+      }
+
+      .key {
+        font-size: 80%;
+        line-height: 14px;
+        text-align: center;
+      }
+    }
+  }
+}

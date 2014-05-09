@@ -1,3 +1,3 @@
-module.exports = function(){
+window.onload = function() {
   require('boot');
 };
