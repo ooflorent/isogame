@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var component = require('gulp-component-builder');
+var cssmin = require('gulp-cssmin');
 var htmlmin = require('gulp-htmlmin');
 
 var htmlminOptions = {
@@ -26,6 +27,7 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
   return gulp.src('component.json')
     .pipe(component.styles(stylesPlugins))
+    .pipe(cssmin())
     .pipe(gulp.dest('build'));
 });
 
